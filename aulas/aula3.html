@@ -1,71 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 3 - HTML</title>
+    <title>HTML</title>
 </head>
-<body>
-    <h1>HTML
-        <sup>Linguagem de Marcação de Hipertexto</sup>
-    </h1>
-    
-    <h2>Tutoriais para iniciantes</h3>
-    
-    <p>
-        <img align="left" width="40%" height="auto" src="/assets/html.avif" alt="Fundo amarelo com um desenho de uma pasta e escrito HTML dentro dela">
-        <!--Também poderia ser hspace mas não to gostando do "design". O align é uma tag obsoleta, não recomendada-->
-        <strong><u>HTML</strong></u> (<em>Linguagem de Marcação de Hipertexto</em>) é o bloco de construção mais básico da web. <mark>Define o significado e a estrutura do conteúdo da web</mark>. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento (<i class="english">JavaScript</i>) de uma página web.
-    </p>
 
-    <h3>Tabelas</h3>
-    <p>
-        <table border="1" cellpadding="3" cellspacing="1" width=60%>
-            <thead bgcolor="yellow">
-                <tr align="left">
-                    <th width="15%">TAG</th>
-                    <th>Utilidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>DOCTYPE</td>
-                    <td>É a primeira linha de código necessária em qualquer documento, HTML ou XHTML. A declaração de <em>DOCTYPE</em> é uma instrução para o navegador da web que diz em qual versão do HTML a página é escrita.</td>
-                </tr>
-                <tr>
-                    <td>html</td>
-                    <td>Diz ao navegador que o que estiver dentro dela deve ser encarado como elementos de um código HTML.</td>
-                </tr>
-                <tr>
-                    <td>base</td>
-                    <td>Especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento <em>Base</em> do documento.</td>
-                </tr>
-                <tr>
-                    <td>head</td>
-                    <td>Providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.</td>
-                </tr>
-                <tr>
-                    <td>link</td>
-                    <td>Especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.</td>
-                </tr>
-                <tr>
-                    <td>meta</td>
-                    <td>Define qualquer informação de metadados que não podem ser definidos por outros elementos HTML.</td>
-                </tr>
-                <tr>
-                    <td>style</td>
-                    <td>Contém informações de estilo para um documento ou uma parte do documento. As informações de estilo específico estão contidas dentro deste elemento, geralmente no CSS.</td>
-                </tr>
-                <tr>
-                    <td>title</td>
-                    <td>Define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.</td>
-                </tr>
-                <tr>
-                    <td>body</td>
-                    <td>Representa o conteúdo de um documento HTML. É permitido apenas um <i>body</i> por documento.</td>
-                </tr>
-            </tbody>
-        </table>
-    </p>
+<!--Tirei a imagem como elemento e coloquei como plano de fundo por questões de design. Mas se for necessário colocar, eu coloco-->
+<style>
+    body {
+        background-image: url(/assets/html.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div>
+        <header style="text-align: center;">
+            <h1>HTML
+                <sup>Linguagem de Marcação de Hipertexto</sup>
+            </h1>
+            <h3>Tutoriais para iniciantes</h3>
+        </header>
+
+        <section>
+            <article>
+                <p>
+                    <strong><u>HTML</strong></u> (<em>Linguagem de Marcação de Hipertexto</em>) é o bloco de construção mais
+                    básico da web. <mark>Define o significado e a estrutura do conteúdo da web</mark>. Outras tecnologias além
+                    do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a
+                    funcionalidade/comportamento (<i class="english">JavaScript</i>) de uma página web.
+                </p>
+            </article>
+
+            <article>
+                <table align="center" border="3" cellpadding="3" cellspacing="1" style="background-color: rgba(222, 240, 255, 0.484); border-radius: 2%;" width=60%>
+                    <thead>
+                        <caption style="background-color: rgb(0, 0, 0); color: rgb(254, 252, 244);">
+                            Tabela de Tags HTML
+                        </caption>
+                        
+                        <tr>
+                            <th>TAG</th>
+                            <th align="left">Utilidade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td align="center">DOCTYPE</td>
+                            <td>É a primeira linha de código necessária em qualquer documento, HTML ou XHTML. A declaração de
+                                <em>DOCTYPE</em> é uma instrução para o navegador da web que diz em qual versão do HTML a página
+                                é escrita.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">html</td>
+                            <td>Diz ao navegador que o que estiver dentro dela deve ser encarado como elementos de um código
+                                HTML.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">base</td>
+                            <td>Especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um
+                                documento. Há um número máximo de 1 (um) elemento <em>Base</em> do documento.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">head</td>
+                            <td>Providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para
+                                scripts e folhas de estilos.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">link</td>
+                            <td>Especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este
+                                elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais
+                                usado para vincular as folhas de estilo.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">meta</td>
+                            <td>Define qualquer informação de metadados que não podem ser definidos por outros elementos HTML.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">style</td>
+                            <td>Contém informações de estilo para um documento ou uma parte do documento. As informações de
+                                estilo específico estão contidas dentro deste elemento, geralmente no CSS.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">title</td>
+                            <td>Define o título do documento, mostrado na barra de título de um navegador ou na aba da página.
+                                Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">body</td>
+                            <td>Representa o conteúdo de um documento HTML. É permitido apenas um <i>body</i> por documento.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article>
+                <ol>
+                    <li>TCP/IP</li>
+                    <li>HTTP</li>
+                    <li>XMPP</li>
+                    <li>POP, IMAP e SMTP</li>
+                    <li>DHCP</li>
+                    <li>FTP, SFTP, FTPS</li>
+                    <li>SSH</li>
+                    <li>ICMP</li>
+                </ol>
+            </article>
+        </section>
+
+        <footer align="center">
+            Direitos nada reservados &copy;
+        </footer>
+    </div>
 </body>
+
 </html>
