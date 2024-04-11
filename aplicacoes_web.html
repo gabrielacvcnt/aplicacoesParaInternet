@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>HTML</title>
+</head>
+
+<style>
+    * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        vertical-align: 0;
+        list-style: none;
+    }
+
+    body {
+        background-image: url(/assets/html.avif);
+        background-position: center;
+        background-size: cover;
+        font-family: 'Montserrat';
+    }
+
+    header {
+        padding: 30px 0;
+        text-align: center;
+        color: #281F18;
+        font-size:x-large;
+    }
+
+    nav {
+        background-color: #130f0c;
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul,
+    footer ul {
+        list-style: none;
+    }
+
+    nav a{
+        text-decoration: none;
+    }
+
+    nav a:link,
+    footer a:link {
+        color: #ccc;
+    }
+
+    nav a:visited,
+    footer a:visited {
+        color: #ccc;
+    }
+    
+    section {
+        padding: 10px 20px 10px 20px;
+    }
+    
+    h2{
+        margin-bottom: 15px;
+    }
+
+    #titulo_bv{
+        margin-bottom: 0px;
+    }
+
+    p{    
+        line-height: 1.5em;
+    }
+    
+    #p_camadas{
+        margin-bottom: 10px;
+    }
+
+    .cards_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .cards_ben_vant {
+        background-color: #ffffff75;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #281F18;
+        box-sizing: border-box;
+        flex: 1;
+        line-height: 1.4em;
+        margin: 10px;
+        max-width: calc(33.33% - 20px);
+        padding: 10px;
+    }
+
+    .cards_camadas {
+        background-color: #ffffff75;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #281F18;
+        box-sizing: border-box;
+        flex-basis: calc(33.33% - 20px);
+        line-height: 1.4em;
+        margin: 10px;
+        max-height: 300px;
+        max-width: calc(33.33% - 20px);
+        padding: 10px;
+    }
+
+    button{
+        background-color: #281F18;
+        border-radius: 20px;
+        color: #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+        padding: 5px 15px;
+        transition: color 0.3s ease;
+    }
+
+    #form_contato {
+        padding: 20px;
+        background-color: #ffffffcc;
+        box-shadow: 0px 2px 5px #0000001a;
+        max-width: 600px;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    form label {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+        color: #281F18;
+        font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea{
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .limpar-formulario {
+        color: #281F18;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    form button:hover {
+        background-color: #ffffffcc;
+        color: #281F18;
+    }
+
+    .limpar-formulario {
+    background-color: #ffffffcc;
+    color: #281F18;
+    border: 1px solid #281F18;
+    padding: 0px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .limpar-formulario:hover {
+    background-color: #281F18;
+    color: #fff;
+    }
+
+    #links {
+        color: #ffffffcc;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #130f0c;
+    }
+
+    .container {
+        width: 200px;
+    }
+
+    .container h2 {
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+
+    .container ul {
+        list-style: none;
+    }
+
+    .container ul li {
+        margin-bottom: 5px;
+        font-size: 0.8em;
+    }
+
+    .container ul li a {
+        text-decoration: none;
+        color: #ccc;
+        transition: color 0.3s ease;
+    }
+
+    .container ul li a:hover {
+        color: #281F18;
+    }
+
+    .copyright{
+        display: flex;
+        justify-content: center;
+        font-size: 0.8em;
+        padding: 6px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Aplicações Web</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#aplicacoes_web"><b>Aplicações Web</b></a></li>
+            <li><a href="#beneficios_vantagens"><b>Benefícios e Vantagens</b></a></li>
+            <li><a href="#camadas_desenvolvimento"><b>Camadas de Desenvolvimento</b></a></li>
+            <li><a href="#contato"><b>Contato</b></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="aplicacoes_web">
+            <h2>Conceito e Importância</h2>
+            <p>As aplicações web são programas ou softwares acessados por meio de um navegador web, sem a necessidade de
+                instalação no dispositivo do usuário. Elas são fundamentais na era digital, oferecendo uma série de
+                benefícios em relação às aplicações tradicionais, como desktop e mobile.
+            </p>
+        </section>
+
+        <section id="beneficios_vantagens">
+            <h2 id="titulo_bv"">Benefícios e Vantagens</h2>
+            <br>
+            <div class="cards_container">
+                <div class="cards_ben_vant">
+                    <h4>Acessibilidade</h4>
+                    <p>Podem ser acessadas de qualquer dispositivo com navegador e conexão à internet, tornando-as
+                        amplamente disponíveis.</p>
+                </div>
+                <div class="cards_ben_vant">
+                    <h4>Atualizações Simplificadas</h4>
+                    <p>As atualizações e manutenções podem ser feitas de forma centralizada no servidor, garantindo que
+                        todos os usuários tenham acesso às últimas versões sem a necessidade de atualizar
+                        individualmente.</p>
+                </div>
+                <div class="cards_ben_vant">
+                    <h4>Custos Reduzidos</h4>
+                    <p>O desenvolvimento e distribuição de aplicações web geralmente têm custos mais baixos em
+                        comparação com aplicações tradicionais, especialmente devido à eliminação da necessidade de
+                        instalação e atualização em cada dispositivo.</p>
+                </div>
+                <div class="cards_ben_vant">
+                    <h4>Integração Flexível</h4>
+                    <p>Permitem integração com diferentes sistemas e serviços, possibilitando a criação de soluções mais
+                        abrangentes e interconectadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="camadas_desenvolvimento">
+            <h2>Camadas de Desenvolvimento</h2>
+            <p id="p_camadas">Nas aplicações web, existem diferentes camadas que trabalham juntas para criar uma experiência funcional
+                e visualmente atraente para os usuários, representando diferentes aspectos do processo de construção e
+                funcionamento das aplicações.</p>
+            <div class="cards_container">
+                <div class="cards_camadas">
+                    <h4>Camada de Estruturação (HTML)</h4>
+                    <p>É como você organiza o conteúdo na página, como textos, imagens e vídeos.</p>
+                    <a href="sobre_html.html"><button type="button">Saiba mais</button></a>
+                </div>
+                <div class="cards_camadas">
+                    <h4>Camada de Estilo (CSS)</h4>
+                    <p>É responsável por deixar a página bonita, aplicando cores, fontes e layouts.</p>
+                </div>
+                <div class="cards_camadas">
+                    <h4>Camada de Interação (JavaScript)</h4>
+                    <p>Permite que a página seja mais dinâmica, com elementos que respondem aos cliques e interações do
+                        usuário.</p>
+                </div>
+                <div class="cards_camadas">
+                    <h4>Frameworks</h4>
+                    <p>São conjuntos de ferramentas que facilitam a construção de partes específicas da aplicação, como
+                        interfaces de usuário complexas. Exemplos de frameworks incluem React, Angular e Vue.js.</p>
+                </div>
+                <div class="cards_camadas">
+                    <h4>Banco de Dados</h4>
+                    <p>Armazena informações importantes para a aplicação, como dados de usuários, produtos e outras
+                        informações necessárias para o funcionamento do sistema. Exemplos de bancos de dados incluem
+                        MySQL, PostgreSQL (SQL), MongoDB (NoSQL) e Firebase (NoSQL).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="duvidas">
+        <h2>Dúvidas?</h2>
+        <form method="put" action="confirmacao_contato.html" id="form_contato">
+            <caption>Formulário de Contato</caption>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem" required></textarea>
+
+            <button type="submit" class="botoes_form">Enviar</button>
+            <input type="reset" class="limpar-formulario" value="Limpar formulário">
+        </form>
+    </section>
+
+    <footer id="links">
+        <div class="container">
+            <h2>Sobre</h2>
+            <ul>
+                <li><a href="#aplicacoes_web">Topo</a></li>
+                <li><a href="#autora">Autora</a></li>
+                <li><a href="#duvidas">Dúvidas</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Referências</h2>
+            <ul>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Documentários</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Tutoriais</h2>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Outros links</h2>
+            <ul>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Comunidades</a></li>
+                <li><a href="#">Eventos</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <p class="copyright">Direitos nada reservados &copy;</p>
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>HTML</title>
+</head>
+
+<style>
+    * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        vertical-align: 0;
+        list-style: none;
+    }
+
+    body {
+        background-image: url(/assets/html.avif);
+        background-position: center;
+        background-size: cover;
+        font-family: 'Montserrat';
+    }
+
+    header {
+        padding: 30px 0;
+        text-align: center;
+        color: #281F18;
+        font-size: x-large;
+    }
+
+    nav {
+        background-color: #130f0c;
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul,
+    footer ul {
+        list-style: none;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav a:link,
+    footer a:link {
+        color: #ccc;
+    }
+
+    nav a:visited,
+    footer a:visited {
+        color: #ccc;
+    }
+
+    section {
+        padding: 10px 20px 10px 20px;
+    }
+
+    p {
+        margin: 15px 0;
+        line-height: 1.5em;
+    }
+
+    th {
+        align-self: center;
+    }
+
+    #elementos_protocolos {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .tabela_elementos_html caption {
+        background-color: rgb(0, 0, 0);
+        color: rgb(254, 252, 244);
+
+    }
+
+    .tabela_elementos_html {
+        float: right;
+        width: 50%;
+        background-color: rgba(222, 240, 255, 0.484);
+        border-radius: 2%;
+    }
+
+    .lista {
+        float: left;
+        width: 50%;
+    }
+
+    .sobre_html {
+        color: aqua;
+    }
+
+    .sobre_css {
+        color: brown;
+    }
+
+    .sobre-js {
+        background-color: blue;
+        color: blueviolet;
+    }
+
+    .elementos_container2 {
+        background-color: aliceblue;
+        text-align: justify;
+        width: 33.33%;
+    }
+
+    .elementos_container h2 {
+        text-align: center;
+        background-color: white;
+    }
+
+    button {
+        background-color: #281F18;
+        border-radius: 20px;
+        color: #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+        padding: 5px 15px;
+        transition: color 0.3s ease;
+    }
+
+    #form_contato {
+        padding: 20px;
+        background-color: #ffffffcc;
+        box-shadow: 0px 2px 5px #0000001a;
+        max-width: 600px;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    form label {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+        color: #281F18;
+        font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .limpar-formulario {
+        color: #281F18;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    form button:hover {
+        background-color: #ffffffcc;
+        color: #281F18;
+    }
+
+    .limpar-formulario {
+        background-color: #ffffffcc;
+        color: #281F18;
+        border: 1px solid #281F18;
+        padding: 0px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .limpar-formulario:hover {
+        background-color: #281F18;
+        color: #fff;
+    }
+
+    #links {
+        color: #ffffffcc;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #130f0c;
+    }
+
+    .container {
+        width: 200px;
+    }
+
+    .container h2 {
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+
+    .container ul {
+        list-style: none;
+    }
+
+    .container ul li {
+        margin-bottom: 5px;
+        font-size: 0.8em;
+    }
+
+    .container ul li a {
+        text-decoration: none;
+        color: #ccc;
+        transition: color 0.3s ease;
+    }
+
+    .container ul li a:hover {
+        color: #281F18;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8em;
+        padding: 6px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>HTML</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introducao"><b>Introdução</b></a></li>
+            <li><a href="#elementos"><b>Elementos</b></a></li>
+            <li><a href="#atributos"><b>Atributos</b></a></li>
+            <li><a href="#contato"><b>Contato</b></a></li>
+        </ul>
+    </nav>
+
+    <section id="introducao">
+        <h2>Introdução</h2>
+        <p><strong>HTML</strong> (<em>HyperText Markup Language</em> ou, na nossa tradução, "<em>Linguagem de Marcação
+                de
+                Hipertexto"</em>) é o bloco de construção mais básico da web. Ele define o significado e
+            a estrutura do conteúdo da web. O "<strong>Hipertexto</strong>" refere-se aos links que conectam páginas da
+            Web entre si, seja dentro de um único site ou entre sites. Links são um aspecto fundamental da web. Ao
+            carregar conteúdo na Internet e vinculá-lo a páginas
+            criadas por outras pessoas, você se torna um participante ativo na world wide web.
+        </p>
+    </section>
+
+    </div>
+
+    <div id="elementos_protocolos">
+        <section class="tabela_elementos_html">
+            <table>
+                <thead>
+                    <caption>Tabela de Tags HTML</caption>
+
+                    <tr>
+                        <th>TAG</th>
+                        <th>Utilidade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>DOCTYPE</td>
+                        <td>É a primeira linha de código necessária em qualquer documento, HTML ou XHTML. A declaração
+                            de
+                            <em>DOCTYPE</em> é uma instrução para o navegador da web que diz em qual versão do HTML a
+                            página
+                            é escrita.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>html</td>
+                        <td>Diz ao navegador que o que estiver dentro dela deve ser encarado como elementos de um código
+                            HTML.</td>
+                    </tr>
+                    <tr>
+                        <td>base</td>
+                        <td>Especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um
+                            documento. Há um número máximo de 1 (um) elemento <em>Base</em> do documento.</td>
+                    </tr>
+                    <tr>
+                        <td>head</td>
+                        <td>Providencia informações gerais (metadados) sobre o documento, incluindo seu título e links
+                            para
+                            scripts e folhas de estilos.</td>
+                    </tr>
+                    <tr>
+                        <td>link</td>
+                        <td>Especifica as relações entre o documento atual e um recurso externo. Possíveis usos para
+                            este
+                            elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é
+                            mais
+                            usado para vincular as folhas de estilo.</td>
+                    </tr>
+                    <tr>
+                        <td>meta</td>
+                        <td>Define qualquer informação de metadados que não podem ser definidos por outros elementos
+                            HTML.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>style</td>
+                        <td>Contém informações de estilo para um documento ou uma parte do documento. As informações de
+                            estilo específico estão contidas dentro deste elemento, geralmente no CSS.</td>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>Define o título do documento, mostrado na barra de título de um navegador ou na aba da
+                            página.
+                            Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>body</td>
+                        <td>Representa o conteúdo de um documento HTML. É permitido apenas um <i>body</i> por documento.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lista_protocolos">
+            <ol>
+                <h2>Protocolos da Web</h2><br>
+                <li>TCP/IP</li>
+                <li>HTTP</li>
+                <li>XMPP</li>
+                <li>POP, IMAP e SMTP</li>
+                <li>DHCP</li>
+                <li>FTP, SFTP, FTPS</li>
+                <li>SSH</li>
+                <li>ICMP</li>
+            </ol>
+        </section>
+    </div>
+
+    <div class="container3" id="css_js">
+        <section class="sobre_css elementos_container2">
+            <h2>Sobre CSS</h2>
+
+            <p>Responsável por deixar a página bonita, aplicando cores, fontes e layouts. [discorrer mais]</p>
+        </section>
+
+        <section class="sobre_js elementos_container2">
+            <h2>Sobre JavaScript</h2>
+
+            <p>vebgrbhr</p>
+        </section>
+    </div>
+
+
+    <section id="duvidas">
+        <h2>Dúvidas?</h2>
+        <form method="put" action="confirmacao_contato.html" id="form_contato">
+            <caption>Formulário de Contato</caption>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem" required></textarea>
+
+            <button type="submit" class="botoes_form">Enviar</button>
+            <input type="reset" class="limpar-formulario" value="Limpar formulário">
+        </form>
+    </section>
+
+    <footer id="links">
+        <div class="container">
+            <h2>Sobre</h2>
+            <ul>
+                <li><a href="#aplicacoes_web">Topo</a></li>
+                <li><a href="#autora">Autora</a></li>
+                <li><a href="#duvidas">Dúvidas</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Referências</h2>
+            <ul>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Documentários</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Tutoriais</h2>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Outros links</h2>
+            <ul>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Comunidades</a></li>
+                <li><a href="#">Eventos</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <p class="copyright">Direitos nada reservados &copy;</p>
+</body>
+
+</html>
