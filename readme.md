@@ -1,0 +1,1 @@
+https://gamma.app/docs/Technologia-Simplificata-5surfcd0k3a5pjq

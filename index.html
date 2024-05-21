@@ -1,189 +1,177 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <!--Responsividade-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technologia Simplificata</title>
-    <!--Ícone do título da aba do navegador-->
-    <link rel="icon" type="image/x-icon" href="/assets/ts_icon.png">
-    <!--Linkando o CSS do Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="/assets/ts_vertical_logo.png" alt="Logo TS - Technologia Simplificata" style="width: 150px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conteúdos</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Aplicações Web</a></li>
-                                    <li><a class="dropdown-item" href="#">Modelagem de Negócios</a></li>
-                                    <li><a class="dropdown-item" href="#">Organização e Arquitetura de Computadores</a></li>
-                                    <li><a class="dropdown-item" href="#">Programação de Computadores</a></li>
-                                    <li><a class="dropdown-item" href="#">Sistemas Operacionais</a></li>
-                                </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contato">Contato</a>
-                        </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/ts_vertical_logo.png" alt="Logo TS - Technologia Simplificata" width="130px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Conteúdos</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="aplicacoes_web.html">Aplicações Web</a></li>
+                        <li><a class="dropdown-item" href="modelagem_negocios.html">Modelagem de Negócios</a></li>
+                        <li><a class="dropdown-item" href="organizacao_arquitetura_computadores.html">Organização e Arquitetura de Computadores</a></li>
+                        <li><a class="dropdown-item" href="programacao_computadores.html">Programação de Computadores</a></li>
+                        <li><a class="dropdown-item" href="sistemas_operacionais.html">Sistemas Operacionais</a></li>
                     </ul>
-                    <form class="d-flex ml-lg-auto">
-                        <input type="search" class="form-control rounded" placeholder="Procurar" aria-label="Search" aria-describedby="search-addon"/>
-                        <button class="btn btn-outline-primary" type="submit" id="search-addon">
-                            <i class="fas fa-search"></i>
-                        </button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#newsletter">Newsletter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner de Apresentação -->
+    <header class="py-5 text-center bg-dark text-white">
+        <div class="container">
+            <h1 class="display-4">Technologia Simplificata</h1>
+            <p class="lead">Apresentando conteúdos do curso de Ciência da Computação de forma simples, didática e direta.</p>
+        </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Sobre</h2>
+                    <p class="text-muted">Technologia Simplificata é um projeto dedicado a apresentar matérias de Ciência da Computação de maneira acessível e didática. Nossa missão é descomplicar conceitos complexos e tornar o aprendizado mais acessível a todos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Conteúdos em Destaque -->
+    <section id="conteudos-destaques" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Conteúdos em Destaque</h2>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Conteúdo 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/assets/app_web0.jpg" class="card-img-top" alt="Conteúdo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplicações Web</h5>
+                            <p class="card-text">Descrição breve do conteúdo 1.</p>
+                            <a href="aplicacoes_web.html" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Conteúdo 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/assets/bpmn1.jpg" class="card-img-top" alt="Conteúdo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Modelagem de Negócios</h5>
+                            <p class="card-text">Descrição breve do conteúdo 2.</p>
+                            <a href="modelagem_negocios.html" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Conteúdo 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/assets/arquitetura_pcs1.jpg" class="card-img-top" alt="Conteúdo 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Arquitetura de Computadores</h5>
+                            <p class="card-text">Descrição breve do conteúdo 3.</p>
+                            <a href="organizacao_arquitetura_computadores.html" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Newsletter -->
+    <section id="newsletter" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Newsletter</h2>
+                    <p class="text-muted">Inscreva-se na nossa newsletter para receber atualizações sobre novos conteúdos e materiais.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="inscricao_newsletter.php" method="POST" class="d-flex justify-content-center flex-column flex-sm-row">
+                        <div class="form-group mb-2">
+                            <label for="emailNewsletter" class="visually-hidden">Email</label>
+                            <input type="email" class="form-control" id="emailNewsletter" name="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2 ms-sm-2">Inscrever</button>
                     </form>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </section>
 
-    <main>
-        <section id="sobre" class="py-5">
-            <div class="container">
-                <h2>Sobre</h2>
-                <p>No TS, acreditamos que a tecnologia deve ser acessível e compreensível para todos. Nosso objetivo é simplificar conceitos complexos de ciência da computação e tecnologia, tornando-os fáceis de entender. Queremosque você aprenda como a tecnologia funciona e como aplicá-lo no dia-a-dia, de maneira simples, didática e direta.</p>
-            </div>
-        </section>
-
-        <section id="cursos" class="py-5 bg-light">
-            <div class="container">
-                <h2>Conteúdos em Destaque</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3>Aplicações Web</h3>
-                                <p class="card-text">Descrever resumidamente o Curso.</p>
-                                <a href="#" class="btn btn-primary">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3>Modelagem de Negócios</h3>
-                                <p class="card-text">Descrever resumidamente o Curso.</p>
-                                <a href="#" class="btn btn-primary">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3>Organização e Arquitetura de Computadores</h3>
-                                <p class="card-text">Descrever resumidamente o Curso.</p>
-                                <a href="#" class="btn btn-primary">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="recursos" class="py-5">
-            <div class="container">
-                <h2>Recursos de Aprendizagem</h2>
-                <ul>
-                    <li>Material de Leitura Recomendado</li>
-                    <li>Tutoriais</li>
-                    <li>Projetos Práticos</li>
-                    <!-- Adicionar mais recursos conforme necessário -->
-                </ul>
-            </div>
-        </section>
-
-        <section id="contato" class="py-5 bg-light">
-            <div class="container">
-                <h2>Contato</h2>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" class="form-control" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- <footer class="bg-dark text-light py-4">
+    <!-- Seção Contato -->
+    <section id="contato" class="py-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">Política de Privacidade</a></li>
-                        <li class="list-inline-item"><a href="#">Termos de Serviço</a></li>
-                    </ul>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contato</h2>
+                    <p class="text-muted">Envie suas dúvidas, sugestões ou feedback através do formulário abaixo.</p>
                 </div>
-                <div class="col-md-6 text-right">
-                    <p>Redes sociais</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="contato.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </footer> -->
+    </section>
 
-    <footer class="footer">
-        <div class="waves">
-          <div class="wave" id="wave1"></div>
-          <div class="wave" id="wave2"></div>
-          <div class="wave" id="wave3"></div>
-          <div class="wave" id="wave4"></div>
+    <footer class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>&copy; 2024 Technologia Simplificata. Todos os direitos reservados.</small>
         </div>
-        <ul class="social-icon">
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-tiktok"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-github"></ion-icon>
-            </a></li>
-        </ul>
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="#">Página Inicial</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Sobre</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Conteúdos</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contato</a></li>
-    
-        </ul>
-        <p>&copy; 2024 Technologia Simplificata | All Rights Reserved</p>
-      </footer>
-    <!--Linkando o JS do Bootstrap: alguns componentes do Bootstrap 5 possuem algum tipo de interatividade ou características que demandam o uso do JS. Por conta disso, precisamos linkar o doc JS que o Bootstrap disponibiliza para habilitar o uso desses componentes-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
