@@ -18,6 +18,8 @@ async function sendEmail(event) {
     emailjs.send('service_p084kd9', 'template_7ycnivd', templateParams).then(
       (response) => {
         console.log('Mensagem enviada com sucesso!', response.status, response.text);
+        alert('Mensagem enviada com sucesso!', response.status, response.text);
+        
       },
       (error) => {
         console.log('Falhou: ' + error.message);
