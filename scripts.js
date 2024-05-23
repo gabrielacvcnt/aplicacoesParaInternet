@@ -30,17 +30,17 @@ async function sendEmail(event) {
 }
 
 async function subscribeOnNewsletter(event) {
-  event.preventDefault();
+  event.preventDefault(); //evitar reload da pagina ao clicar em submit
   
   const userNewsletterEmail = document.getElementById('emailNewsletter').value;
   const response = await fetch('https://absvbcpkeoewcpotourl.supabase.co/rest/v1/newsletter', {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${supabase_apikey}`,
+      "Authorization": `Bearer ${supabase_apikey}`, //JWT 
       "apikey": supabase_apikey,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ "email": userNewsletterEmail })
+    body: JSON.stringify({ "email": userNewsletterEmail }) //converte o trecho passado para json(para envio na API)
   });
 
   if (!response.ok) {
@@ -52,7 +52,8 @@ async function subscribeOnNewsletter(event) {
 
 async function fetchContentData() {
   try {
-    const response = await fetch('https://absvbcpkeoewcpotourl.supabase.co/rest/v1/conteudo?order=data_criacao.desc', {
+    const response = await fetch('https://absvbcpkeoewcpotourl.supabase.co/rest/v1/conteudo?order=data_criacao.desc&limit=3', {
+
       method: "GET",
       headers: {
         "Authorization": `Bearer ${supabase_apikey}`,
@@ -66,7 +67,7 @@ async function fetchContentData() {
     console.error("Error fetching content data:", error);
     return [];
   }
-}
+}  //funcao para retorno do Json (conteudo inserido no database)
 
 function createCard(item) {
   const descricao = item.html.length >= 100 ? item.html.substring(0, 100).concat("...") : item.html;
@@ -83,7 +84,7 @@ function createCard(item) {
       </div>
     </div>
   `;
-}
+} //retorna o bootstrap com as variáveis tendo valor buscado na API
 
 async function displayContent() {
   const contentRow = document.getElementById('conteudos');
@@ -100,12 +101,14 @@ async function displayContent() {
     return;
   }
 
-  data.slice(0,3).forEach(item => {
+  data.forEach(item => {
     const cardHTML = createCard(item);
     const cardElement = document.createElement('div');
     cardElement.innerHTML = cardHTML.trim();
     contentRow.appendChild(cardElement.firstChild);
+    //manipulação de DOM para tornar o retorno da API em HTML no nosso código
   });
 }
 
 document.addEventListener('DOMContentLoaded', displayContent);
+//só carrega a função dps da pagina estar carregada, para evitar bugs de nao encontrar o conteúdo
