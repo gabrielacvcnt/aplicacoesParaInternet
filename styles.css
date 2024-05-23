@@ -3,8 +3,15 @@ body {
   padding-top: 56px; /* Compensar a altura da navbar fixa */
 }
 
+.navbar{
+  padding: 0 20px 0 20px;
+}
 .navbar-brand img {
   max-height: 50px;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 header {
