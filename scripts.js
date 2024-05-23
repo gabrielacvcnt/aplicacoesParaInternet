@@ -52,7 +52,7 @@ async function subscribeOnNewsletter(event) {
 
 async function fetchContentData() {
   try {
-    const response = await fetch('https://absvbcpkeoewcpotourl.supabase.co/rest/v1/conteudo', {
+    const response = await fetch('https://absvbcpkeoewcpotourl.supabase.co/rest/v1/conteudo?order=data_criacao.desc', {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${supabase_apikey}`,
